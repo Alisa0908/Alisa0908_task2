@@ -1,0 +1,18 @@
+@charset 'utd-8';
+
+.buttons {
+    display: block;
+    float: left;
+}
+
+label {
+    display: block;
+}
+
+.tasks {
+    display: flex;
+}
+
+.tasks a {
+    margin-right: 10px;
+}
