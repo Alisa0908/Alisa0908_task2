@@ -1,6 +1,11 @@
 @charset 'utd-8';
 
-button {
+/* button {
+    display: block;
+    float: left;
+} */
+
+.buttons {
     display: block;
     float: left;
 }
