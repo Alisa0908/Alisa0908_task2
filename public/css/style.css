@@ -1,0 +1,10 @@
+@charset 'utd-8';
+
+button {
+    display: block;
+    float: left;
+}
+
+label {
+    display: block;
+}
