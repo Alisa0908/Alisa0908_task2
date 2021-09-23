@@ -8,6 +8,18 @@
 </head>
 
 <body>
+    @if ($errors->any())
+        <div class="error">
+            <p>
+                <b>【エラー内容】</b>
+            </p>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <h1>
         <b>投稿論文編集</b>
     </h1>

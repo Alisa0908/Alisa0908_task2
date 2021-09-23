@@ -20,6 +20,18 @@
         </form>
     @endforeach
     <hr>
+    @if ($errors->any())
+        <div class="error">
+            <p>
+                <b>【エラー内容】</b>
+            </p>
+            <ul>
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <h1>
         <b>新規論文投稿</b>
     </h1>
