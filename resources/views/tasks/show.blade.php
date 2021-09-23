@@ -17,10 +17,10 @@
         {{ $task->body }}</p>
     <button class="buttons" type="button" onclick="location.href='/tasks'">一覧へ戻る</button>
     <button class="buttons" type="button" onclick="location.href='/tasks/{{ $task->id }}/edit'">編集する</button>
-    <input type="submit" value="削除する" onclick="if(!confirm('本当に削除しますか?')){return false}" form="delete">
     <form action="/tasks/{{ $task->id }}" method="post" id="delete">
         @csrf
         @method('DELETE')
+        <input type="submit" value="削除する" onclick="if(!confirm('本当に削除しますか?')){return false};" form="delete">
     </form>
 </body>
 

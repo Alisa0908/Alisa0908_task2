@@ -1,10 +1,5 @@
 @charset 'utd-8';
 
-/* button {
-    display: block;
-    float: left;
-} */
-
 .buttons {
     display: block;
     float: left;
@@ -12,4 +7,12 @@
 
 label {
     display: block;
+}
+
+.tasks {
+    display: flex;
+}
+
+.tasks a {
+    margin-right: 10px;
 }

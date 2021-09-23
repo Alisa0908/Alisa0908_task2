@@ -12,12 +12,14 @@
         <b>タスク一覧</b>
     </h1>
     @foreach ($tasks as $task)
-        <a href="/tasks/{{ $task->id }}">{{ $task->title }}</a>
-        <input type="submit" value="削除する" form="delete" onclick="if(!confirm('本当に削除しますか?')){return false}">
-        <form action="/tasks/{{ $task->id }}" method="post" id="delete">
-            @csrf
-            @method('DELETE')
-        </form>
+        <div class="tasks">
+            <a href="/tasks/{{ $task->id }}">{{ $task->title }}</a>
+            <form action="/tasks/{{ $task->id }}" method="post">
+                @csrf
+                @method('DELETE')
+                <input type="submit" value="削除する" onclick="if(!confirm('本当に削除しますか?')){return false};">
+            </form>
+        </div>
     @endforeach
     <hr>
     @if ($errors->any())
@@ -26,7 +28,7 @@
                 <b>【エラー内容】</b>
             </p>
             <ul>
-                @foreach($errors->all() as $error)
+                @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
             </ul>
